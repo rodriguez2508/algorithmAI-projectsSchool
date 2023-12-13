@@ -1,0 +1,20 @@
+
+ 
+  
+  /* Estilos para pantallas pequeñas o teléfonos */
+  @media screen and (max-width: 767px) {
+    /* Estilos para pantallas pequeñas o teléfonos */
+    body {
+      font-size: 14px;
+       
+    }
+    .panel-button{
+        display: grid!important;
+    }
+    button{
+        height: auto!important;
+        width: 85vw!important;
+        text-transform: none!important;
+        margin-bottom: 1%!important;
+    }
+  }

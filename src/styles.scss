@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@function set-height($height) {
+    @return #{$height}vh; // Retorna la altura en vh
+  }
+  
+  // Creación de clases con alturas predefinidas
+  @for $i from 1 through 100 {
+    .set-height-#{$i} {
+      height: set-height($i);
+      overflow: hidden;
+    }
+  }
+  
+  // Creación de clases con alturas predefinidas
+  @for $i from 1 through 100 {
+      .set-height-s-#{$i} {
+        height: set-height($i);
+        overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+        overflow-x: hidden; /* Agrega un scroll vertical si es necesario */
+      }
+    }
+   
+
+
+     
+ ._center-h {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin: auto;
+  }
+  
+  ._center-h-sb {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    margin: auto;
+  }
+  
+  .center-h-sa {
+    display: flex;
+    justify-content: space-around; 
+    margin: auto;
+  }
+
+
+/* scroll fondo */
+::-webkit-scrollbar-track {
+    background-color: black;
+    border-right: black 1px solid;
+    border-left: black 1px solid;
+  }
+  /* scroll barra */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(163, 160, 160);
+  }
