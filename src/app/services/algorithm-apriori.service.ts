@@ -29,7 +29,7 @@ export class AlgorithmAprioriService {
   // --
   // Se encarga de todo el proceso de encontrar los conjuntos de ítems frecuentes en base a un umbral de soporte dado.
   // --
-  public findFrequentItemsets(elements: string[][], minSupport: number): string[] {
+  public findFrequentItemsets(elements: any, minSupport: number): string[] {
     const elementsCount = elements.length;
     const itemsetsCount = this.countItemsets(elements);
     const frequentItemsets: string[] = [];

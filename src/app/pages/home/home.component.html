@@ -25,22 +25,27 @@
           ' w3-col s12 set-height-20 text-uppercase me-2 btn btn-lg border-primary border text-white rounded-3'
         "
         (click)="f_algorithm('apriori')"
+        data-bs-toggle="tooltip" 
+        [title]="aprioriInfo"
       >
-        Apriori umbral({{ minSupport }})
+        Apriori | umbral({{ minSupport }})
+        
       </button>
       <button
         [classList]="
           ' w3-col s12 set-height-20 me-2 text-uppercase btn btn-lg border-warning border text-white rounded-3'
         "
         (click)="f_algorithm('camina')"
+        [title]="caminaInfo"
       >
-        Camina
+        Caminante aleatorio | pasos({{ pasos }})
       </button>
       <button
         [classList]="
           ' w3-col s12 set-height-20 me-2 text-uppercase btn btn-lg border-success border text-white rounded-3'
         "
         (click)="f_algorithm('arbolDecisiones')"
+        [title]="arbolInfo"
       >
         Árbol de Decisiones
       </button>
@@ -49,7 +54,7 @@
 
   <!-- 
       --
-      -- Panel Mostrador
+      -- Panel Resultado
       --
      -->
   <div [classList]="'w3-row w3-col l8 m8 s8  set-height-90'">
@@ -74,7 +79,7 @@
 
   <!-- 
       --
-      -- Panel Lista
+      -- Panel Lista Elementos
       --
      -->
   <div [classList]="'w3-row w3-col l4 m4 s4 set-height-90'">
@@ -87,6 +92,7 @@
         'w3-row w3-col set-height-s-55 border border-white rounded-1 w3-container'
       "
     >
+  
       @for (subArray of elements; track subArray) {
       <ul [classList]="'border-bottom border-white'">
         @for (item of subArray; track item) {
