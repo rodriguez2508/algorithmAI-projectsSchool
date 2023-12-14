@@ -37,7 +37,7 @@ export class HomeComponent {
   pasos = 5;
 
   // Ejemplo de predicción
-  prediccion = ['pan', 'hamburguesa', 'leche', 'azúcar', 'huevos'];
+  prediccion = ['pan', 'manzana', 'leche' , 'arroz', 'azúcar', 'nuez', 'miel', 'canela'];
 
   //  Resultado a mostrar
   resultData: string[] = [];
