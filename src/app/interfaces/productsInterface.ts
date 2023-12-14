@@ -1,4 +1,5 @@
+
 export interface ProductInterface{
-    items: string[][];
+    items: string[];
  
 }
