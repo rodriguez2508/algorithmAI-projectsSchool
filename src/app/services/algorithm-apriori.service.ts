@@ -36,6 +36,8 @@ export class AlgorithmAprioriService {
 
     for (const [item, count] of itemsetsCount.entries()) {
       const support = count / elementsCount;
+       
+
       if (support >= minSupport) {
         frequentItemsets.push(item);
       }
